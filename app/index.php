@@ -1,4 +1,8 @@
-<?php $title='A shopping cart using jQuery and ajax'; include(__DIR__ . '/../structure/header.php'); ?>
+<?php 
+$title='A shopping cart using jQuery and ajax'; 
+include(__DIR__ . '/../structure/header.php'); 
+include(__DIR__ . '/../structure/src/bootstrap.php');
+?>
 
 <div id='flash'>
   <h1>Kundkorg</h1>
@@ -21,6 +25,7 @@
         <th>Köp</th>
     </tr>
     <?php
+ 
     $jsonstring = file_get_contents("exempelartiklar.json");
     $productsArray = json_decode($jsonstring, true); 
     foreach ($productsArray as $key => $obj) 
@@ -37,6 +42,11 @@
         </tr>";
     }?>
   </table>
+  <?php
+    $cart = new CShoppingcart(); 
+    $cart->update(); 
+    $cart->draw(); 
+  ?>
 </div>
 
 <?php $path=__DIR__; include(__DIR__ . '/../structure/footer.php'); ?>
