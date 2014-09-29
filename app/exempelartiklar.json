@@ -1,0 +1,68 @@
+[
+  {
+    "code": "J7410",
+    "name": "Joystick för smartphones",
+    "vat": 25,
+    "price": 239.2
+  },
+  {
+    "code": "abc123",
+    "name": "Headset",
+    "vat": 25,
+    "price": 175.2
+  },
+  {
+    "code": "42139",
+    "name": "Solcellsladdare",
+    "vat": 25,
+    "price": 279.2
+  },
+  {
+    "code": "BBTCG",
+    "name": "Godismaskin med klo",
+    "vat": 25,
+    "price": 319.2
+  },
+  {
+    "code": "13064",
+    "name": "Helikopter Väckarklocka",
+    "vat": 25,
+    "price": 191.2
+  },
+  {
+    "code": "D40717",
+    "name": "Exotisk fjädermask Röd",
+    "vat": 25,
+    "price": 95.2
+  },
+  {
+    "code": "D11255",
+    "name": "Slangbella",
+    "vat": 25,
+    "price": 79.2
+  },
+  {
+    "code": "D40617",
+    "name": "Monstermask Brun",
+    "vat": 25,
+    "price": 90.4
+  },
+  {
+    "code": "D68691",
+    "name": "Brainfreeze isform",
+    "vat": 25,
+    "price": 80
+  },
+  {
+    "code": "11-600.50.04",
+    "name": "Walther Century 4,5mm",
+    "vat": 25,
+    "price": 3516
+  },
+  {
+    "code": "9789170378041",
+    "name": "Kunskapens frukt",
+    "vat": 6,
+    "price": 140.566037736
+  }
+]
