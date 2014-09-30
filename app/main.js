@@ -29,7 +29,7 @@ $(document).ready(function(){
   var initCart = function() {
     $.ajax({
       type: 'post',
-      url: 'shop.php',
+      url: 'cart.php',
       dataType: 'json',
       success: function(data){
         updateCart(data);
@@ -48,7 +48,7 @@ $(document).ready(function(){
     var id = $(this).attr('id');
     $.ajax({
       type: 'post',
-      url: 'shop.php?action=add',
+      url: 'cart.php?action=add',
       data: {
         itemid: id
       },
@@ -69,7 +69,7 @@ $(document).ready(function(){
   $("#clear").click(function() {
     $.ajax({
       type: 'post',
-      url: 'shop.php?action=clear',
+      url: 'cart.php?action=clear',
       dataType: 'json',
       success: function(data){
         updateCart(data);

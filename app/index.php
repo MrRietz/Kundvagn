@@ -38,15 +38,10 @@ include(__DIR__ . '/../structure/src/bootstrap.php');
         <td><center>" . round($vat)         ."</center></td>   
         <td><center>" . round($fullPrice)   ."</center></td>
         <td><center><input type='number' name='nrOfProd' min='1' max='99'></center></td>
-        <td><center><button id='book1' class='purchase'>Lägg i korg</button></center></td>
+        <td><center><button id='$key' class='purchase'>Lägg i korg</button></center></td>
         </tr>";
     }?>
   </table>
-  <?php
-    $cart = new CShoppingcart(); 
-    $cart->update(); 
-    $cart->draw(); 
-  ?>
 </div>
 
 <?php $path=__DIR__; include(__DIR__ . '/../structure/footer.php'); ?>
