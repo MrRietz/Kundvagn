@@ -15,33 +15,11 @@ include(__DIR__ . '/../structure/src/bootstrap.php');
       <input id="clear" type="button" value="Clear" />  <span id="status">Köp något.</span>
     </p>
   </div>
-  <table>
-    <tr>
-        <th>Art Nr</th>
-        <th>Namn</th>
-        <th>Moms</th>
-        <th>Pris inkl moms</th>
-        <th>Antal</th>
-        <th>Köp</th>
-    </tr>
-    <?php
- 
-    $jsonstring = file_get_contents("exempelartiklar.json");
-    $productsArray = json_decode($jsonstring, true); 
-    foreach ($productsArray as $key => $obj) 
-    {
-        $vat = ($obj['vat'] / 100)*$obj['price']; 
-        $fullPrice = $obj['price'] + $vat; 
-        echo "<tr>
-        <td>" .         $obj['code'] ."</td>
-        <td>" .         $obj['name'] ."</td>
-        <td><center>" . round($vat)         ."</center></td>   
-        <td><center>" . round($fullPrice)   ."</center></td>
-        <td><center><input type='number' name='nrOfProd' min='1' max='99'></center></td>
-        <td><center><button id='$key' class='purchase'>Lägg i korg</button></center></td>
-        </tr>";
-    }?>
-  </table>
+  <?php
+      $jsonFile = file_get_contents("exempelartiklar.json");
+      $items = new CItems($jsonFile);
+      $items->draw(); 
+  ?>
 </div>
 
 <?php $path=__DIR__; include(__DIR__ . '/../structure/footer.php'); ?>
