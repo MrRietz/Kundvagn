@@ -4,14 +4,13 @@ class CShoppingcart
 {
     private $items = null; 
     
-    public function __construct($action)
+    public function __construct($items)
     {
         error_reporting(-1);
         session_name('shoppingcart');
         session_start();
 
-        $jsonFile = file_get_contents("exempelartiklar.json");
-        $this->items = json_decode($jsonFile,true); 
+        $this->items = json_decode($items,true); 
     }
     public function __destruct() 
     {
@@ -20,10 +19,6 @@ class CShoppingcart
     public function clear()
     {
         $_SESSION['cart'] = array('sum'=>0, 'numitems' => 0, 'items'=>array()); 
-    }
-    public function getItems()
-    {
-        return $this->items; 
     }
     public function addItem()
     {

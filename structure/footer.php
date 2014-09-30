@@ -14,8 +14,8 @@
 </nav>
  
 </footer>
-<script src="/js/jquery.js"></script>
-<script src="../Structure/mos.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="../structure/helpfunctions.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
