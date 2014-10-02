@@ -5,9 +5,9 @@ $(document).ready(function(){
   'use strict';
 
   // Function to update shopping cart
-  var updateCart = function(data) {
+    var updateCart = function(data) {
     $('#content').html(data.content);
-    $('#numitems').html(data.numitems);
+    $('#nrOfItems').html(data.nrOfItems);
     $('#sum').html(data.sum);
     $('#status').html('Shopping cart refreshed.');
     
@@ -26,7 +26,8 @@ $(document).ready(function(){
 
 
   // Init the shopping cart
-  var initCart = function() {
+
+  /*var initCart = function() {
     $.ajax({
       type: 'post',
       url: 'cart.php',
@@ -40,9 +41,10 @@ $(document).ready(function(){
       }
     });   
   };
-  initCart();
+  initCart();*/
 
-
+  //fix the format to another one different from JSON 
+  //no need to be JSON 
   // Callback when making a purchase
   $('.purchase').click(function() {
     var id = $(this).attr('id');
@@ -85,4 +87,3 @@ $(document).ready(function(){
 
   console.log('Ready to roll.');
 });
-
