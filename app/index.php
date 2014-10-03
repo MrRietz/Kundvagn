@@ -5,7 +5,7 @@ include(__DIR__ . '/../structure/src/bootstrap.php');
 ?>
 
 <div id='flash'>
-  <h1>The bookshop for the javascripter</h1>
+  <h1>My Cart</h1>
   <div id='cart'>
     <h2><img src="/img/cart.png" width="40px">Shopping cart</h2>
     <div id='content'></div>
