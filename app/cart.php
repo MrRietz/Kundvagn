@@ -2,8 +2,8 @@
 
 include(__DIR__ . '/../structure/src/bootstrap.php');
 
-$jsonFile = file_get_contents("exempelartiklar.json");
-$cart = new CShoppingcart($jsonFile); 
+
+$cart = new CShoppingcart(); 
 
 $action= empty($_GET['action']) ? null : $_GET['action'];
 
@@ -12,6 +12,6 @@ if ($action == 'clear' || !isset($_SESSION['cart'])) {
 }
 // Action to add item in shopping cart
 if ($action == 'add' && !empty($_POST['itemid'])) {
-    $cart->addItem();
+      $cart->addItem();
 }
 $cart->drawCart(); 
