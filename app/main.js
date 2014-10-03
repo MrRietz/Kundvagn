@@ -25,8 +25,8 @@ $(document).ready(function(){
   };
 
 
-// Init the shopping cart
-var initCart = function() {
+  // Init the shopping cart
+  var initCart = function() {
     $.ajax({
       type: 'post',
       url: 'cart.php',
@@ -42,6 +42,7 @@ var initCart = function() {
   };
   initCart();
 
+
   // Callback when making a purchase
   $('.purchase').click(function() {
     var id = $(this).attr('id');
@@ -49,8 +50,7 @@ var initCart = function() {
       type: 'post',
       url: 'cart.php?action=add',
       data: {
-        itemid: id,
-        //quantity: $('#quantity_'+id).val()
+        itemid: id
       },
       dataType: 'json',
       success: function(data){
@@ -85,3 +85,4 @@ var initCart = function() {
 
   console.log('Ready to roll.');
 });
+

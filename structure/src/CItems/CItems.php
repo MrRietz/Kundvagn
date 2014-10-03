@@ -30,6 +30,9 @@ class CItems
         </tr>"; 
         foreach ($this->items as $key => $obj) 
         {
+            /* <td><center><input id='quantity_".$key."' type='number' name='nrOfProd' min='1' max='99'></center></td>
+            <td><center><button name ='".$obj['code']."' id='" .$obj['code']. "' class='purchase'>Lägg i korg</button></center></td>
+*/
             $vat = ($obj['vat'] / 100)*$obj['price']; 
             $fullPrice = $obj['price'] + $vat; 
             $table .=
@@ -38,8 +41,9 @@ class CItems
             <td>" .         $obj['name'] ."</td>
             <td><center>" . round($vat)         ."</center></td>   
             <td><center>" . round($fullPrice)   ."</center></td>
-            <td><center><input id='quantity_".$key."' type='number' name='nrOfProd' min='1' max='99'></center></td>
-            <td><center><button name ='".$obj['code']."' id='" .$obj['code']. "' class='purchase'>Lägg i korg</button></center></td>
+            <td><center><input type='number' name='nrOfProd' min='1' max='99'></center></td>
+            <td><center><button id='$key' class='purchase'>Lägg i korg</button></center></td>
+
             </tr>";
         }
         $table .= "</table>"; 

@@ -4,9 +4,6 @@
  *
  */
 
-session_name('shoppingcart');
-session_start();
-        
 function myExceptionHandler($exception) 
 {
     echo "PageBurn: Uncaught exception: <p>" .
